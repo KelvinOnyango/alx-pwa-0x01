@@ -1,0 +1,34 @@
+# Create public directories
+mkdir -p public/icons
+
+# Create manifest.json
+cat > public/manifest.json << 'EOF'
+{
+  "name": "Cine Seek",
+  "short_name": "CineSeek",
+  "description": "Find your next favorite movie",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
+EOF
